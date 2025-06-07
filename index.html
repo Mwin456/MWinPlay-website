@@ -2,30 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MWinPlay - Play Big, Win Smart</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
     }
 
-    html, body {
+    body, html {
       height: 100%;
-      width: 100%;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
     }
 
     .banner {
-      position: relative;
+      background: url('neymar_banner.jpg') no-repeat center center/cover;
       height: 100vh;
       width: 100%;
-      background: url('assets/neymar_banner.jpg') no-repeat center center/cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      position: relative;
     }
 
     .overlay {
@@ -34,71 +32,57 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background-color: rgba(0, 0, 0, 0.6);
-      z-index: 1;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      color: white;
       padding: 20px;
     }
 
-    .content h1 {
-      font-size: 3rem;
-      font-weight: 700;
+    .overlay h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-bottom: 20px;
     }
 
-    .content p {
+    .overlay p {
       font-size: 1.2rem;
-      margin-top: 10px;
-      opacity: 0.9;
+      margin-bottom: 30px;
     }
 
     .btn {
-      margin-top: 20px;
-      padding: 12px 30px;
       background-color: #ff3366;
-      border: none;
       color: white;
+      padding: 14px 28px;
+      border-radius: 6px;
       font-size: 1rem;
-      border-radius: 30px;
-      cursor: pointer;
-      transition: background 0.3s ease;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #e52e5c;
+      background-color: #e0295a;
     }
 
-    @media (max-width: 600px) {
-      .content h1 {
+    @media screen and (max-width: 768px) {
+      .overlay h1 {
         font-size: 2rem;
       }
-
-      .content p {
+      .overlay p {
         font-size: 1rem;
-      }
-
-      .btn {
-        font-size: 0.9rem;
-        padding: 10px 20px;
       }
     }
   </style>
 </head>
 <body>
-
-  <section class="banner">
-    <div class="overlay"></div>
-    <div class="content">
-      <h1>MWinPlay</h1>
+  <div class="banner">
+    <div class="overlay">
+      <h1>Welcome to MWinPlay</h1>
       <p>Play Big. Win Smart.</p>
-      <a href="#download"><button class="btn">Get Started</button></a>
+      <a href="#" class="btn">Download</a>
     </div>
-  </section>
-
+  </div>
 </body>
 </html>
