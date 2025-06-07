@@ -3,14 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MWinPlay - Play Big. Win Smart.</title>
+  <title>MWinPlay - Mobile</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0e0e0e;
-      color: #ffffff;
-      text-align: center;
+      background-color: #000;
+      color: #fff;
     }
 
     .banner {
@@ -23,7 +30,8 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding-bottom: 80px;
+      align-items: center;
+      text-align: center;
     }
 
     .overlay {
@@ -31,81 +39,75 @@
       top: 0; left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background-color: rgba(0, 0, 0, 0.5);
       z-index: 1;
     }
 
-    .banner-content {
+    .content {
       position: relative;
       z-index: 2;
-      max-width: 90%;
+      padding: 15px;
+      width: 100%;
     }
 
     h1 {
-      font-size: 2.8rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
     }
 
     p {
-      font-size: 1.2rem;
-      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
 
     .btn {
-      background: #ff9900;
+      background-color: #ff9900;
       color: #000;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 30px;
-      font-weight: bold;
+      padding: 10px 22px;
+      border-radius: 25px;
       font-size: 1rem;
-      cursor: pointer;
+      font-weight: bold;
       text-decoration: none;
-      transition: 0.3s;
+      display: inline-block;
+      margin-bottom: 0.8rem;
     }
 
-    .btn:hover {
-      background: #ffaa33;
+    .refer {
+      font-size: 0.95rem;
     }
 
-    .referral {
-      background: #1e1e1e;
-      padding: 30px 10px;
-      margin-top: 0;
-    }
+    @media (min-width: 600px) {
+      /* Prevent zooming on desktop */
+      .banner {
+        display: none;
+      }
 
-    .referral h2 {
-      font-size: 1.6rem;
-      margin-bottom: 10px;
-    }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #111;
+        font-size: 1.2rem;
+      }
 
-    .referral p {
-      font-size: 1.2rem;
-    }
-
-    @media(max-width: 600px) {
-      h1 { font-size: 2rem; }
-      p { font-size: 1rem; }
-      .btn { padding: 10px 20px; font-size: 0.9rem; }
+      body::before {
+        content: "This site is designed for mobile only 📱";
+        color: #fff;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- 🔥 Banner Section -->
   <div class="banner">
     <div class="overlay"></div>
-    <div class="banner-content">
-      <h1>Play Big. Win Smart.</h1>
+    <div class="content">
+      <h1>Play Big. Win Smart.
+        khelo jeeto aur enjoy.</h1>
       <p>India's Ultimate Gaming Destination</p>
       <a href="#" class="btn">Get Now</a>
+      <div class="refer">Per Refer ₹50 | Signup Bonus ₹20</div>
     </div>
-  </div>
-
-  <!-- 💸 Referral Info -->
-  <div class="referral">
-    <h2>💸 Refer & Earn</h2>
-    <p>Per Refer: ₹50 | Signup Bonus: ₹20</p>
   </div>
 
 </body>
