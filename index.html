@@ -2,87 +2,102 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MWinPlay - Play Big, Win Smart</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MWinPlay - Play Big. Win Smart.</title>
   <style>
-    * {
+    body {
       margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
-      height: 100%;
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: #fff;
-    }
-
-    .banner {
-      background: url('neymar_banner.jpg') no-repeat center center/cover;
-      height: 100vh;
-      width: 100%;
-      position: relative;
-    }
-
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: #ffffff;
       text-align: center;
+    }
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-image: url('assets/neymar_banner.jpg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       padding: 20px;
     }
-
-    .overlay h1 {
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    .banner-content {
+      position: relative;
+      z-index: 2;
+      max-width: 90%;
+    }
+    h1 {
       font-size: 2.8rem;
-      font-weight: 600;
-      margin-bottom: 20px;
+      margin-bottom: 0.5rem;
     }
-
-    .overlay p {
+    p {
       font-size: 1.2rem;
-      margin-bottom: 30px;
+      margin-bottom: 1.5rem;
     }
-
     .btn {
-      background-color: #ff3366;
-      color: white;
-      padding: 14px 28px;
-      border-radius: 6px;
+      background: #ff9900;
+      color: #000;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-weight: bold;
       font-size: 1rem;
+      cursor: pointer;
       text-decoration: none;
-      transition: background-color 0.3s ease;
+      transition: 0.3s;
     }
-
     .btn:hover {
-      background-color: #e0295a;
+      background: #ffaa33;
+    }
+    .referral {
+      background: #1e1e1e;
+      padding: 30px 10px;
+      margin-top: -10px;
+    }
+    .referral h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+    .referral p {
+      font-size: 1.2rem;
     }
 
-    @media screen and (max-width: 768px) {
-      .overlay h1 {
-        font-size: 2rem;
-      }
-      .overlay p {
-        font-size: 1rem;
-      }
+    @media(max-width: 600px) {
+      h1 { font-size: 2rem; }
+      p { font-size: 1rem; }
+      .btn { padding: 10px 20px; font-size: 0.9rem; }
     }
   </style>
 </head>
 <body>
+
+  <!-- 🟧 Banner Section -->
   <div class="banner">
-    <div class="overlay">
-      <h1>Welcome to MWinPlay</h1>
-      <p>Play Big. Win Smart.</p>
-      <a href="#" class="btn">Download</a>
+    <div class="overlay"></div>
+    <div class="banner-content">
+      <h1>Play Big. Win Smart.</h1>
+      <p>India's Ultimate Gaming Destination</p>
+      <a href="#" class="btn">Download Now</a>
     </div>
   </div>
+
+  <!-- 💸 Referral Info -->
+  <div class="referral">
+    <h2>💸 Refer & Earn</h2>
+    <p>Per Refer: ₹50 | Signup Bonus: ₹20</p>
+  </div>
+
 </body>
 </html>
